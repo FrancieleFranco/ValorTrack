@@ -9,31 +9,49 @@
 // Be sure that you only ever include this mixin once!
 @include mat.core();
 
-// Define the palettes for your theme using the Material Design palettes available in palette.scss
-// (imported above). For each palette, you can optionally specify a default, lighter, and darker
-// hue. Available color palettes: https://material.io/design/color/
-$target-test-primary: mat.define-palette(mat.$indigo-palette);
-$target-test-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+/* Resetando margens e paddings padrões do navegador */
+/* Resetando margens e paddings padrão */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-// The warn palette is optional (defaults to red).
-$target-test-warn: mat.define-palette(mat.$red-palette);
+/* Definindo o corpo da página */
+body {
+  display: flex;
+  justify-content: center; /* Centraliza verticalmente */
+  align-items: center; /* Centraliza horizontalmente */
+  width: 100%;
+  background-color: #f0efef;
+}
 
-// Create the theme object. A theme consists of configurations for individual
-// theming systems such as "color" or "typography".
-$target-test-theme: mat.define-light-theme((
-  color: (
-    primary: $target-test-primary,
-    accent: $target-test-accent,
-    warn: $target-test-warn,
-  )
-));
+/* Centraliza o título */
+h1 {
+  font-size: 2em; /* Tamanho do título */
+  margin-bottom: 10px; /* Espaço entre o título e a tabela */
+  color: #333; /* Cor do texto do título */
+}
 
-// Include theme styles for core and each component used in your app.
-// Alternatively, you can import and @include the theme mixins for each component
-// that you are using.
-@include mat.all-component-themes($target-test-theme);
+/* Estilos da tabela */
+table {
+  width: 40rem; /* Ajusta a largura da tabela */
+  height: 0.5rem;
+  margin-top: 10px; /* Adiciona espaço entre a tabela e o topo */
+  border-collapse: collapse; /* Remove o espaçamento entre as bordas */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Adiciona sombra para melhorar o visual */
+}
 
-/* You can add global styles to this file, and also import other style files */
+/* Estilos das células da tabela */
+th, td {
+  padding: 10px; /* Espaçamento interno das células */
+  font-size: 1.2em; /* Tamanho da fonte nas células */
+  border: 1px solid #ddd; /* Borda entre as células */
+  height: 1rem;
+}
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+/* Estilo das células de cabeçalho */
+th {
+  background-color: #f2f2f2; /* Cor de fundo do cabeçalho */
+  font-weight: bold; /* Deixa o texto do cabeçalho em negrito */
+}

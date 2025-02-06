@@ -1,18 +1,22 @@
-<h1>Lista de Dados</h1>
-<table border="10" >
-  <thead>
-    <tr>
-      <th>Dia</th>
-      <th>Valor</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let data of dataValue">
-      <td>{{ data.dia}}</td>
-      <td>{{ data.valor| currency:'BRL' }}</td>
-    </tr>
-  </tbody>
-</table>
+<div className="container">
+  <h1>Lista de Dados</h1>
+
+    <table border="10">
+      <thead>
+        <tr>
+          <th>Dia</th>
+          <th>Valor</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let data of dataValue">
+          <td>{{ data.dia }}</td>
+          <td>{{ data.valor | currency : "BRL" }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
 
 
 <router-outlet></router-outlet>
