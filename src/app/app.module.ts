@@ -6,17 +6,21 @@ import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BillingComponent } from './component/billing/billing.component';
+import { FibonacciComponent } from './component/fibonacci/fibonacci.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
-    BillingComponent
+    BillingComponent,
+    FibonacciComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    FormsModule
 
   ],
   providers: [],

@@ -1,0 +1,7 @@
+<div className="sum-container">
+  <h1>Exercício 2 - Sequência de Fibonacci</h1>
+  <label for="numero">Informe um número:</label>
+  <input id="numero" [(ngModel)]=" numberInformed" type="number" />
+  <button (click)="calculateFibonacci()" >Calcular</button>
+  <p>{{ resultFibonacci }}</p>
+</div>

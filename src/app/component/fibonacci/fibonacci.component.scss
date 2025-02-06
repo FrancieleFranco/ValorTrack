@@ -1,0 +1,43 @@
+
+
+.fibonacci {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  margin: 20px 0;
+  background-color: #f9f9f9;
+  width: 80%;
+  max-width: 600px;
+}
+input{
+  margin-top: 20px;
+  padding: 10px 15px;
+
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button {
+  margin-top: 20px;
+  padding: 10px 15px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+h2 {
+  margin-bottom: 10px;
+  color: #333;
+}
